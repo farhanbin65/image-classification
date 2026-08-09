@@ -26,6 +26,11 @@ domains with **90%+ accuracy** on all projects.
 - Confusion Matrix: 98% precision (Dogs), 98% recall (Cats)
 - [View Project →](./projects/01_dogs_vs_cats)
 
+<img width="1382" height="593" alt="image" src="https://github.com/user-attachments/assets/5c374be4-5387-4f53-9b57-8dd51eb20a5a" />
+
+<img width="1389" height="495" alt="image" src="https://github.com/user-attachments/assets/99761dd0-86eb-4a20-b99a-9c36aa93bf72" />
+
+
 ### 2. 🍕🍔🍟🍗 Food Classification
 **Status:** ⏳ In Progress  
 **Accuracy:** (TBD)  
@@ -33,6 +38,11 @@ domains with **90%+ accuracy** on all projects.
 
 - Multi-class classification
 - [View Project →](./projects/02_food_classification)
+
+  <img width="1589" height="788" alt="image" src="https://github.com/user-attachments/assets/52c0bfad-4235-430c-a0d2-6fe9452e1af8" />
+
+  <img width="1390" height="495" alt="image" src="https://github.com/user-attachments/assets/2e65d584-1b83-4d4c-a7e7-24fbf0df8508" />
+
 
 ### 3. 🐦 Bird Species Recognition
 **Status:** 📋 Planned  
