@@ -73,9 +73,9 @@ Source: Fast Food Classification Dataset v2 (Kaggle)
 
 ## 📄 Results
 
-![Training History](results/food_training_history.png)
-![Confusion Matrix Clean](results/food_cm_clean.png)
-![Confusion Matrix Noisy](results/food_cm_noisy.png)
+![Training History](./food_results/food_training_history.png)
+![Confusion Matrix Clean](./food_results/food_cm_clean.png)
+![Confusion Matrix Noisy](./food_results/food_cm_noisy.png)
 
 ---
 

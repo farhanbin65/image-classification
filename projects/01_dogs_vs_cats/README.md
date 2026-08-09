@@ -85,11 +85,11 @@ Source: [Kaggle Dogs vs Cats Dataset](https://www.kaggle.com/datasets/salader/do
 
 ## 📈 Training History
 
-![Training History](../results/training_history.png)
+![Training History](./results/training_history.png)
 
 ## 🔍 Confusion Matrix
 
-![Confusion Matrix](../results/confusion_matrix.png)
+![Confusion Matrix](./results/confusion_matrix.png)
 
 ## 📝 Key Insights
 
