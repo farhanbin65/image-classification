@@ -15,25 +15,27 @@ domains with **90%+ accuracy** on all projects.
 **Portfolio:** [farhanbin.dev](https://farhanbin.dev)
 
 ---
-
 ## Projects
 
 ### 1. Dogs vs Cats Classification
 **Status:** Complete  
-**Accuracy:** 96.36%  
+**Accuracy:** 96.74%  
 **Classes:** 2 (Binary)  
 **Dataset:** 25,000 images
 
-- Feature Extraction + Fine-tuning
+- Transfer Learning with MobileNetV2
+- Two-phase training: Feature Extraction + Fine-tuning
+- Early stopping + Model checkpointing
 - Confusion Matrix: 98% precision (Dogs), 98% recall (Cats)
 - [View Project →](./projects/01_dogs_vs_cats)
 
-  <img width="1382" height="593" alt="image" src="https://github.com/user-attachments/assets/1a544275-d167-426e-9cfe-eb002a00bcfe" />
+<img width="1382" height="593" alt="image" src="https://github.com/user-attachments/assets/1a544275-d167-426e-9cfe-eb002a00bcfe" />
 
 <img width="1389" height="495" alt="image" src="https://github.com/user-attachments/assets/99761dd0-86eb-4a20-b99a-9c36aa93bf72" />
 
+---
 
-### 2. Food Classification
+### 2. Fast Food Classification
 **Status:** Complete  
 **Accuracy:** 88.00% (Clean) | 78.50% (Noisy)  
 **Classes:** 4 (Burger, Crispy Chicken, Fries, Pizza)  
@@ -43,21 +45,33 @@ domains with **90%+ accuracy** on all projects.
 - Two-phase training: Feature Extraction + Fine-tuning
 - Data Augmentation (rotation, flip, zoom, brightness)
 - Noisy data testing (blur, brightness, rotation, occlusion)
+- Performance drop of 9.5% on noisy data
 - [View Project →](./projects/02_food_classification)
 
 <img width="1589" height="788" alt="image" src="https://github.com/user-attachments/assets/e8111bb3-e924-4578-a634-8635ce9eac2c" />
 
- <img width="1390" height="495" alt="image" src="https://github.com/user-attachments/assets/2e65d584-1b83-4d4c-a7e7-24fbf0df8508" />
+<img width="1390" height="495" alt="image" src="https://github.com/user-attachments/assets/2e65d584-1b83-4d4c-a7e7-24fbf0df8508" />
 
+---
 
+### 3. Fashion MNIST Classification
+**Status:** Complete  
+**Accuracy:** 94.42% (Custom CNN) | 93.24% (Transfer Learning)  
+**Classes:** 10 fashion categories  
+**Dataset:** 70,000 grayscale images (28x28 pixels)
 
-### 3. Bird Species Recognition
-**Status:** Planned  
-**Classes:** 50+
+- Compared Custom CNN vs Transfer Learning (MobileNetV2)
+- Custom CNN won: smaller, faster, more accurate
+- Key finding: Transfer learning not always better
+- Hardest class: Shirt (80.2%) - visually similar to T-shirt
+- Best class: Trouser (99.7%) - unique shape
+- [View Project →](./projects/03_fashion_mnist)
 
-### 4. Plant Disease Detection
-**Status:** Planned  
-**Classes:** 10+
+![Sample Images](./projects/03_fashion_mnist/results/sample_images.png)
+
+![Confusion Matrix Comparison](./projects/03_fashion_mnist/results/comparison_confusion_matrix.png)
+
+![Training History](./projects/03_fashion_mnist/results/comparison_history.png)
 
 ---
 
