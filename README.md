@@ -73,6 +73,39 @@ domains with **90%+ accuracy** on all projects.
 
 ---
 
+## Pipeline
+
+```mermaid
+flowchart TD
+    A[Image Classification Portfolio] --> B[Dogs vs Cats]
+    A --> C[Food Classification]
+    A --> D[Fashion MNIST]
+
+    B --> B1[Dataset: 25,000 images · 2 classes]
+    B --> B2[Model: MobileNetV2 · Binary]
+    B --> B3[Accuracy: 96.74%]
+
+    C --> C1[Dataset: 800 images · 4 classes]
+    C --> C2[Model: MobileNetV2 · Categorical]
+    C --> C3[Accuracy: 88.00% clean · 78.50% noisy]
+
+    D --> D1[Dataset: 70,000 images · 10 classes]
+    D --> D2[Model: Custom CNN vs MobileNetV2]
+    D --> D3[Accuracy: CNN 94.42% · TL 93.24%]
+
+    B2 & C2 & D2 --> E[Shared Training Pipeline]
+
+    E --> F[Phase 1: Feature extraction]
+    F --> G[Phase 2: Fine-tuning]
+    G --> H[Evaluate: Confusion matrix + F1]
+    H --> I[Save: .keras model]
+
+    E --> J[Early stopping · Checkpointing · LR reduction]
+```
+
+
+---
+
 ## Tech Stack
 
 - **Framework:** TensorFlow/Keras
