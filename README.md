@@ -8,7 +8,7 @@ using **Transfer Learning** with MobileNetV2.
 This portfolio demonstrates **production-ready** AI/ML solutions across multiple 
 domains with **90%+ accuracy** on all projects.
 
-**Author:** Keo (Farhan Bin Hossain)  
+**Author:** Farhan Bin Hossain
 **GitHub:** [@farhanbin65](https://github.com/farhanbin65)  
 **Portfolio:** [farhanbin.dev](https://farhanbin.dev)
 
@@ -90,33 +90,15 @@ pillow>=9.0.0
 
 ---
 
-## Quick Start
-
-```bash
-# Clone repo
-git clone https://github.com/farhanbin65/image-classification-portfolio
-cd image-classification-portfolio
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Train Dogs vs Cats model
-cd projects/01_dogs_vs_cats
-python train.py
-
-# Make predictions
-python predict.py --image path/to/image.jpg
-```
-
----
-
 ## Results Summary
 
 | Project | Accuracy | Precision | Recall | F1-Score |
 |---------|----------|-----------|--------|----------|
-| Dogs vs Cats | 96.36% | 0.96 | 0.96 | 0.96 |
-| Food (Coming) | - | - | - | - |
-| Birds (Coming) | - | - | - | - |
+| Dogs vs Cats | 96.74% | 0.96 | 0.96 | 0.96 |
+| Food Classification | 88.00% | 0.88 | 0.88 | 0.88 |
+| Fashion MNIST (CNN) | 94.42% | 0.94 | 0.94 | 0.94 |
+| Fashion MNIST (TL) | 93.24% | 0.93 | 0.93 | 0.93 |
+| Skin Disease | Coming soon | - | - | - |
 
 ---
 
@@ -166,17 +148,3 @@ Each project includes:
 ## License
 
 MIT License - Feel free to use for learning and projects!
-
----
-
-## Acknowledgments
-
-- TensorFlow/Keras team
-- Kaggle datasets
-- Transfer Learning techniques
-
-**Remember:** *"Knowledge shared is knowledge multiplied."* 
-
----
-
-*Last Updated: August 2026*
