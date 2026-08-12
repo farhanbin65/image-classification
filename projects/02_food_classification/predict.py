@@ -11,7 +11,6 @@ import argparse
 import os
 
 CLASS_NAMES = ['Burger', 'Crispy Chicken', 'Fries', 'Pizza']
-CLASS_EMOJIS = {'Burger': '🍔', 'Crispy Chicken': '🍗', 'Fries': '🍟', 'Pizza': '🍕'}
 
 def predict_image(model_path, image_path):
     
@@ -28,23 +27,23 @@ def predict_image(model_path, image_path):
     pred_idx = np.argmax(predictions)
     pred_class = CLASS_NAMES[pred_idx]
     confidence = predictions[pred_idx]
-    emoji = CLASS_EMOJIS[pred_class]
+    
     
     # Display
     plt.figure(figsize=(8, 6))
     plt.imshow(img)
-    plt.title(f"{emoji} {pred_class} - {confidence*100:.2f}% confident",
+    plt.title(f"{pred_class} - {confidence*100:.2f}% confident",
               fontsize=14, fontweight='bold')
     plt.axis('off')
     plt.tight_layout()
     plt.show()
     
-    print(f"\n{emoji} Prediction: {pred_class}")
-    print(f"📊 Confidence: {confidence*100:.2f}%")
+    print(f"\nPrediction: {pred_class}")
+    print(f"Confidence: {confidence*100:.2f}%")
     print(f"\nAll probabilities:")
     for i, (cls, prob) in enumerate(zip(CLASS_NAMES, predictions)):
         bar = '█' * int(prob * 20)
-        print(f"  {CLASS_EMOJIS[cls]} {cls:<15} {prob*100:>6.2f}% {bar}")
+        print(f"  {cls:<15} {prob*100:>6.2f}% {bar}")
     
     return pred_class, confidence
 

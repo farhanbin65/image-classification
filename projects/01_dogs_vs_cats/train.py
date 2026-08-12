@@ -38,7 +38,7 @@ class Config:
 
 # ==================== MAIN TRAINING SCRIPT ====================
 def main():
-    print("🚀 TRANSFER LEARNING WITH MobileNetV2\n")
+    print("TRANSFER LEARNING WITH MobileNetV2\n")
     print("=" * 60)
     print("Dogs vs Cats Classification")
     print("=" * 60 + "\n")
@@ -46,7 +46,7 @@ def main():
     config = Config()
     
     # ==================== 1. LOAD DATA ====================
-    print("📥 Loading dataset...\n")
+    print("Loading dataset...\n")
     
     train_datagen = ImageDataGenerator(rescale=1.0/255)
     test_datagen = ImageDataGenerator(rescale=1.0/255)
@@ -66,8 +66,8 @@ def main():
         shuffle=False
     )
     
-    print(f"✅ Training samples: {train_data.samples}")
-    print(f"✅ Testing samples: {test_data.samples}\n")
+    print(f"Training samples: {train_data.samples}")
+    print(f"Testing samples: {test_data.samples}\n")
     
     # ==================== 2. BUILD MODEL ====================
     print("🔧 Loading MobileNetV2 pretrained model...\n")
@@ -87,11 +87,11 @@ def main():
     
     model = Model(inputs=base_model.input, outputs=output)
     
-    print("✅ Model built!\n")
+    print("Model built!\n")
     
     # ==================== 3. PHASE 1: FEATURE EXTRACTION ====================
     print("=" * 60)
-    print("📍 PHASE 1: Feature Extraction (Base Frozen)")
+    print("PHASE 1: Feature Extraction (Base Frozen)")
     print("=" * 60 + "\n")
     
     model.compile(
@@ -107,11 +107,11 @@ def main():
         verbose=1
     )
     
-    print("\n✅ Phase 1 complete!\n")
+    print("\n Phase 1 complete!\n")
     
     # ==================== 4. PHASE 2: FINE-TUNING ====================
     print("=" * 60)
-    print("🔓 PHASE 2: Fine-tuning (Last 20 Layers Unfrozen)")
+    print(" PHASE 2: Fine-tuning (Last 20 Layers Unfrozen)")
     print("=" * 60 + "\n")
     
     base_model.trainable = True
@@ -132,12 +132,12 @@ def main():
         verbose=1
     )
     
-    print("\n✅ Phase 2 complete!\n")
+    print("\n Phase 2 complete!\n")
     
     # ==================== 5. SAVE MODEL ====================
-    print(f"💾 Saving model to {config.MODEL_SAVE_PATH}...\n")
+    print(f"Saving model to {config.MODEL_SAVE_PATH}...\n")
     model.save(config.MODEL_SAVE_PATH)
-    print("✅ Model saved!\n")
+    print("Model saved!\n")
     
     # ==================== 6. SAVE TRAINING HISTORY ====================
     history = {
@@ -158,10 +158,10 @@ def main():
     with open(f"{config.RESULTS_PATH}training_history.json", 'w') as f:
         json.dump(history, f, indent=2)
     
-    print(f"✅ Training history saved!\n")
+    print(f"Training history saved!\n")
     
     # ==================== 7. VISUALIZE ====================
-    print("📊 Generating visualizations...\n")
+    print("Generating visualizations...\n")
     
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
     fig.suptitle('Transfer Learning - MobileNetV2 Training', fontsize=16, fontweight='bold')
@@ -193,10 +193,10 @@ def main():
     
     plt.tight_layout()
     plt.savefig(f"{config.RESULTS_PATH}training_history.png", dpi=300, bbox_inches='tight')
-    print(f"✅ Visualizations saved!\n")
+    print(f"Visualizations saved!\n")
     
     print("=" * 60)
-    print("🎉 TRAINING COMPLETE!")
+    print("TRAINING COMPLETE!")
     print("=" * 60)
 
 if __name__ == "__main__":

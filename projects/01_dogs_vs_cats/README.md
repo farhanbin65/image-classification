@@ -1,14 +1,14 @@
-# 🐕🐈 Dogs vs Cats Classification
+# Dogs vs Cats Classification
 
 Transfer Learning with MobileNetV2
 
-## 📊 Results
+## Results
 
 - **Test Accuracy:** 96.36%
 - **Test Loss:** 0.1494
 - **Training Time:** ~20 minutes (GPU)
 
-## 🏆 Metrics
+##  Metrics
 
 ### Classification Report
 precision    recall  f1-score   support
@@ -27,7 +27,7 @@ Actual Cat Dog
 Cat 2461 39
 Dog 143 2357
 
-## 🏗️ Architecture
+## Architecture
 MobileNetV2 (Pretrained - ImageNet weights)
 ↓
 GlobalAveragePooling2D
@@ -36,7 +36,7 @@ Dense(128, relu)
 ↓
 Dense(1, sigmoid) ← Binary Classification
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Training
 ```bash
@@ -53,7 +53,7 @@ python evaluate.py
 python predict.py --image path/to/image.jpg
 ```
 
-## 📦 Requirements
+## Requirements
 tensorflow>=2.13.0
 numpy>=1.24.0
 matplotlib>=3.7.0
@@ -69,7 +69,7 @@ pillow>=9.0.0
 
 Source: [Kaggle Dogs vs Cats Dataset](https://www.kaggle.com/datasets/salader/dogsvscats)
 
-## 🎓 Training Strategy
+## Training Strategy
 
 ### Phase 1: Feature Extraction (5 epochs)
 - Freeze MobileNetV2 base
@@ -83,22 +83,22 @@ Source: [Kaggle Dogs vs Cats Dataset](https://www.kaggle.com/datasets/salader/do
 - Learning rate: 0.0001 (Adam)
 - Result: 96.36% accuracy
 
-## 📈 Training History
+## Training History
 
 ![Training History](./results/training_history.png)
 
-## 🔍 Confusion Matrix
+##  Confusion Matrix
 
 ![Confusion Matrix](./results/confusion_matrix.png)
 
-## 📝 Key Insights
+## Key Insights
 
 ✅ **High Accuracy:** 96.36% on unseen test data
 ✅ **Balanced Performance:** 95% precision (cats), 98% precision (dogs)
 ✅ **Quick Training:** Only 20 minutes on GPU
 ✅ **Transfer Learning Benefits:** Pre-trained weights accelerate learning
 
-## 🛠️ Technologies
+## Technologies
 
 - **Framework:** TensorFlow/Keras
 - **Model:** MobileNetV2 (Transfer Learning)
@@ -106,12 +106,12 @@ Source: [Kaggle Dogs vs Cats Dataset](https://www.kaggle.com/datasets/salader/do
 - **Loss:** Binary Cross-Entropy
 - **Language:** Python 3.10+
 
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-**Author:** Keo (Farhan Bin Hossain)  
+**Author:** Farhan Bin Hossain
 **Date:** August 2026  
 **GitHub:** [@farhanbin65](https://github.com/farhanbin65)

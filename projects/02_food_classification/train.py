@@ -31,7 +31,7 @@ NUM_CLASSES = 4
 os.makedirs('./model', exist_ok=True)
 os.makedirs('./results', exist_ok=True)
 
-print("🍕 FAST FOOD CLASSIFIER - MobileNetV2 Transfer Learning")
+print("FAST FOOD CLASSIFIER - MobileNetV2 Transfer Learning")
 print("=" * 60)
 print(f"Classes: Burger, Crispy Chicken, Fries, Pizza")
 print(f"Image Size: {IMG_SIZE}")
@@ -59,9 +59,9 @@ valid_data = basic_datagen.flow_from_directory(
     shuffle=False
 )
 
-print(f"\n✅ Train: {train_basic.samples} images")
-print(f"✅ Valid: {valid_data.samples} images")
-print(f"✅ Classes: {train_basic.class_indices}\n")
+print(f"\n Train: {train_basic.samples} images")
+print(f" Valid: {valid_data.samples} images")
+print(f" Classes: {train_basic.class_indices}\n")
 
 # Build basic model
 base_m1 = MobileNetV2(
@@ -83,7 +83,7 @@ basic_model.compile(
     metrics=["accuracy"]
 )
 
-print("🚀 Training Basic Model...\n")
+print(" Training Basic Model...\n")
 history_basic = basic_model.fit(
     train_basic,
     epochs=5,
@@ -92,7 +92,7 @@ history_basic = basic_model.fit(
 )
 
 basic_val_acc = max(history_basic.history['val_accuracy'])
-print(f"\n✅ Task 1 Best Validation Accuracy: {basic_val_acc*100:.2f}%")
+print(f"\n Task 1 Best Validation Accuracy: {basic_val_acc*100:.2f}%")
 
 # ==================== TASK 2: IMPROVED CLASSIFIER ====================
 print("\n" + "=" * 60)
@@ -137,7 +137,7 @@ out2 = Dense(NUM_CLASSES, activation="softmax")(x2)
 improved_model = Model(inputs=base_m2.input, outputs=out2)
 
 # Phase 1
-print("📍 Phase 1: Feature Extraction...\n")
+print(" Phase 1: Feature Extraction...\n")
 improved_model.compile(
     optimizer="adam",
     loss="categorical_crossentropy",
@@ -152,7 +152,7 @@ history_p1 = improved_model.fit(
 )
 
 # Phase 2
-print("\n🔓 Phase 2: Fine-tuning...\n")
+print("\n Phase 2: Fine-tuning...\n")
 base_m2.trainable = True
 for layer in base_m2.layers[:-20]:
     layer.trainable = False
@@ -174,7 +174,7 @@ improved_val_acc = max(
     history_p1.history['val_accuracy'] +
     history_p2.history['val_accuracy']
 )
-print(f"\n✅ Task 2 Best Validation Accuracy: {improved_val_acc*100:.2f}%")
+print(f"\n Task 2 Best Validation Accuracy: {improved_val_acc*100:.2f}%")
 
 # ==================== TASK 3: CLEAN TEST ====================
 print("\n" + "=" * 60)
@@ -199,8 +199,8 @@ pred_classes = np.argmax(preds, axis=1)
 true_classes = test_data.classes
 class_labels = list(test_data.class_indices.keys())
 
-print(f"✅ Clean Test Accuracy: {test_acc*100:.2f}%")
-print(f"✅ Clean Test Loss:     {test_loss:.4f}")
+print(f" Clean Test Accuracy: {test_acc*100:.2f}%")
+print(f" Clean Test Loss:     {test_loss:.4f}")
 print(f"\nClassification Report (Clean):")
 print(classification_report(true_classes, pred_classes, target_names=class_labels))
 
@@ -215,7 +215,7 @@ plt.xlabel('Predicted Label')
 plt.tight_layout()
 plt.savefig('./results/food_cm_clean.png', dpi=300)
 plt.close()
-print("✅ Clean confusion matrix saved!")
+print(" Clean confusion matrix saved!")
 
 # ==================== TASK 4: NOISY TEST ====================
 print("\n" + "=" * 60)
@@ -237,8 +237,8 @@ noisy_preds = improved_model.predict(noisy_data, verbose=0)
 noisy_pred_classes = np.argmax(noisy_preds, axis=1)
 noisy_true = noisy_data.classes
 
-print(f"✅ Noisy Test Accuracy: {noisy_acc*100:.2f}%")
-print(f"✅ Noisy Test Loss:     {noisy_loss:.4f}")
+print(f" Noisy Test Accuracy: {noisy_acc*100:.2f}%")
+print(f" Noisy Test Loss:     {noisy_loss:.4f}")
 print(f"\nClassification Report (Noisy):")
 print(classification_report(noisy_true, noisy_pred_classes, target_names=class_labels))
 
@@ -253,7 +253,7 @@ plt.xlabel('Predicted Label')
 plt.tight_layout()
 plt.savefig('./results/food_cm_noisy.png', dpi=300)
 plt.close()
-print("✅ Noisy confusion matrix saved!")
+print(" Noisy confusion matrix saved!")
 
 # ==================== TRAINING HISTORY ====================
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
@@ -285,7 +285,7 @@ axes[1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig('./results/food_training_history.png', dpi=300)
 plt.close()
-print("✅ Training history saved!")
+print(" Training history saved!")
 
 # ==================== SAVE METRICS ====================
 metrics = {
@@ -314,6 +314,6 @@ print(f"  Task 2 - Improved Model (Val): {improved_val_acc*100:.2f}%")
 print(f"  Task 3 - Clean Test:           {test_acc*100:.2f}%")
 print(f"  Task 4 - Noisy Test:           {noisy_acc*100:.2f}%")
 print(f"\n  Performance drop: {(test_acc-noisy_acc)*100:.2f}%")
-print(f"\n✅ Model saved to: ./model/")
-print(f"✅ Results saved to: ./results/")
-print("\n🎉 ALL 4 TASKS COMPLETE!")
+print(f"\n Task 5 - Model saved to: ./model/")
+print(f" Task 5 - Results saved to: ./results/")
+print("\n  ALL 4 TASKS COMPLETE!")

@@ -34,7 +34,7 @@ class Evaluator:
     def evaluate(self, test_data):
         """Evaluate model on test data"""
         print("\n" + "=" * 60)
-        print("📊 MODEL EVALUATION")
+        print(" MODEL EVALUATION")
         print("=" * 60 + "\n")
         
         # Get predictions
@@ -46,8 +46,8 @@ class Evaluator:
         # Calculate metrics
         test_loss, test_accuracy = self.model.evaluate(test_data, verbose=0)
         
-        print(f"✅ Test Accuracy: {test_accuracy*100:.2f}%")
-        print(f"✅ Test Loss: {test_loss:.4f}\n")
+        print(f"Test Accuracy: {test_accuracy*100:.2f}%")
+        print(f"Test Loss: {test_loss:.4f}\n")
         
         # Confusion Matrix
         cm = confusion_matrix(true_classes, predicted_classes)
@@ -81,7 +81,7 @@ class Evaluator:
         plt.xlabel('Predicted Label')
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Confusion matrix saved to {save_path}")
+        print(f"Confusion matrix saved to {save_path}")
         plt.close()
     
     def plot_roc_curve(self, predictions, true_classes, save_path="./results/roc_curve.png"):
@@ -100,7 +100,7 @@ class Evaluator:
         plt.legend(loc="lower right")
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ ROC curve saved to {save_path}")
+        print(f"ROC curve saved to {save_path}")
         plt.close()
 
 def main():
@@ -123,7 +123,7 @@ def main():
     with open("./results/evaluation_metrics.json", 'w') as f:
         json.dump(evaluator.results, f, indent=2)
     
-    print("\n✅ Evaluation complete!")
+    print("\nEvaluation complete!")
 
 if __name__ == "__main__":
     main()

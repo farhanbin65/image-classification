@@ -38,7 +38,7 @@ def evaluate_model(model_path, test_dir, noisy_dir, img_size=(128, 128)):
     true_classes = test_data.classes
     class_labels = list(test_data.class_indices.keys())
     
-    print(f"✅ Clean Test Accuracy: {test_acc*100:.2f}%")
+    print(f"Clean Test Accuracy: {test_acc*100:.2f}%")
     print(classification_report(true_classes, pred_classes, target_names=class_labels))
     
     # Noisy test
@@ -51,8 +51,8 @@ def evaluate_model(model_path, test_dir, noisy_dir, img_size=(128, 128)):
     )
     
     noisy_loss, noisy_acc = model.evaluate(noisy_data, verbose=0)
-    print(f"✅ Noisy Test Accuracy: {noisy_acc*100:.2f}%")
-    print(f"📉 Performance Drop: {(test_acc-noisy_acc)*100:.2f}%")
+    print(f"Noisy Test Accuracy: {noisy_acc*100:.2f}%")
+    print(f"Performance Drop: {(test_acc-noisy_acc)*100:.2f}%")
 
 if __name__ == "__main__":
     evaluate_model(

@@ -28,7 +28,7 @@ class Predictor:
         img, img_array = self.preprocess_image(image_path)
         prediction = self.model.predict(img_array, verbose=0)[0][0]
         
-        label = "🐕 Dog" if prediction > 0.5 else "🐱 Cat"
+        label = "Dog" if prediction > 0.5 else "Cat"
         confidence = prediction if prediction > 0.5 else 1 - prediction
         
         return label, confidence, img
@@ -53,14 +53,14 @@ def main():
     args = parser.parse_args()
     
     if not os.path.exists(args.image):
-        print(f"❌ Image not found: {args.image}")
+        print(f"Image not found: {args.image}")
         return
     
     predictor = Predictor(args.model)
     label, confidence = predictor.predict_and_display(args.image)
     
-    print(f"\n✅ Prediction: {label}")
-    print(f"📊 Confidence: {confidence*100:.2f}%")
+    print(f"\nPrediction: {label}")
+    print(f"Confidence: {confidence*100:.2f}%")
 
 if __name__ == "__main__":
     main()

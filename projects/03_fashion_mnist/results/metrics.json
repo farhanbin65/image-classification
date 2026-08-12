@@ -1,0 +1,27 @@
+{
+  "custom_cnn": {
+    "test_accuracy": 94.42,
+    "test_loss": 0.1591,
+    "parameters": 619114,
+    "model_size_mb": 2.36,
+    "epochs_trained": 16,
+    "time_per_epoch": "9 seconds"
+  },
+  "transfer_learning": {
+    "test_accuracy": 93.24,
+    "test_loss": 0.2554,
+    "parameters": 3700000,
+    "model_size_mb": 14.0,
+    "backbone": "MobileNetV2",
+    "input_size": "96x96x3"
+  },
+  "dataset": {
+    "train_samples": 60000,
+    "test_samples": 10000,
+    "num_classes": 10,
+    "image_size": "28x28",
+    "channels": "grayscale"
+  },
+  "winner": "Custom CNN",
+  "accuracy_gap": 1.18
+}

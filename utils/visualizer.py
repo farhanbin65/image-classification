@@ -58,7 +58,7 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Training history saved to {save_path}")
+        print(f"Training history saved to {save_path}")
         plt.close()
     
     @staticmethod
@@ -85,7 +85,7 @@ class Visualizer:
         plt.xlabel('Predicted Label')
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Confusion matrix saved to {save_path}")
+        print(f"Confusion matrix saved to {save_path}")
         plt.close()
     
     @staticmethod
@@ -115,5 +115,5 @@ class Visualizer:
         plt.legend(loc="lower right")
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ ROC curve saved to {save_path}")
+        print(f" ROC curve saved to {save_path}")
         plt.close()

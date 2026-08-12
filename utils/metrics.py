@@ -66,11 +66,11 @@ class MetricsCalculator:
         
         # Print results
         print("\n" + "=" * 60)
-        print("📊 MODEL EVALUATION")
+        print(" MODEL EVALUATION")
         print("=" * 60 + "\n")
         
-        print(f"✅ Test Accuracy: {test_accuracy*100:.2f}%")
-        print(f"✅ Test Loss: {test_loss:.4f}\n")
+        print(f" Test Accuracy: {test_accuracy*100:.2f}%")
+        print(f" Test Loss: {test_loss:.4f}\n")
         
         print("Confusion Matrix:")
         print(confusion_matrix(true_classes, predicted_classes))
@@ -93,4 +93,4 @@ class MetricsCalculator:
         with open(filepath, 'w') as f:
             json.dump(self.results, f, indent=2)
         
-        print(f"✅ Metrics saved to {filepath}")
+        print(f" Metrics saved to {filepath}")

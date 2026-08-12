@@ -4,7 +4,7 @@
 
 Transfer Learning with MobileNetV2 - 4 Class Food Classifier
 
-## 📊 Results
+## Results
 
 | Task | Description | Accuracy |
 |------|-------------|----------|
@@ -15,7 +15,7 @@ Transfer Learning with MobileNetV2 - 4 Class Food Classifier
 
 **Performance drop (Clean → Noisy): 9.50%**
 
-## 🏗️ Architecture
+## Architecture
 MobileNetV2 (Pretrained ImageNet)
 ↓
 GlobalAveragePooling2D
@@ -26,14 +26,14 @@ Dense(128, relu) + BatchNorm + Dropout(0.3)
 ↓
 Dense(4, softmax) ← Burger | Crispy Chicken | Fries | Pizza
 
-## 🎯 Improvements Applied (Task 2)
+## Improvements Applied (Task 2)
 
-- ✅ Data Augmentation (rotation, flip, zoom, brightness)
-- ✅ Batch Normalization (stable training)
-- ✅ Dropout regularization (prevent overfitting)
-- ✅ Fine-tuning (last 20 layers, LR=0.0001)
+- Data Augmentation (rotation, flip, zoom, brightness)
+- Batch Normalization (stable training)
+- Dropout regularization (prevent overfitting)
+- Fine-tuning (last 20 layers, LR=0.0001)
 
-## 📈 Per-Class Performance (Clean Test)
+## Per-Class Performance (Clean Test)
 
 | Class | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
@@ -42,14 +42,14 @@ Dense(4, softmax) ← Burger | Crispy Chicken | Fries | Pizza
 | Fries | 89% | 80% | 84% |
 | Pizza | 89% | 94% | 91% |
 
-## 🔍 Noisy Test Analysis
+## Noisy Test Analysis
 
 The model dropped 9.5% on noisy data because:
 - Fries: hardest to identify under noise (texture-based features disrupted)
 - Pizza: most robust (distinctive circular shape maintained)
 - Noise types: blur, brightness, rotation, occlusion
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Train model
@@ -62,7 +62,7 @@ python evaluate.py
 python predict.py --image path/to/food.jpg
 ```
 
-## 📂 Dataset
+## Dataset
 
 - **Train:** 600 images (150 per class)
 - **Valid:** 200 images (50 per class)
@@ -71,7 +71,7 @@ python predict.py --image path/to/food.jpg
 
 Source: Fast Food Classification Dataset v2 (Kaggle)
 
-## 📄 Results
+## Results
 
 ![Training History](./food_results/food_training_history.png)
 ![Confusion Matrix Clean](./food_results/food_cm_clean.png)

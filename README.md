@@ -1,11 +1,11 @@
 x
 x
-B# Image Classification Portfolio 🎯
+B# Image Classification Portfolio 
 
 A comprehensive collection of **deep learning image classification projects** 
 using **Transfer Learning** with MobileNetV2.
 
-## 🎓 Overview
+## Overview
 
 This portfolio demonstrates **production-ready** AI/ML solutions across multiple 
 domains with **90%+ accuracy** on all projects.
@@ -16,10 +16,10 @@ domains with **90%+ accuracy** on all projects.
 
 ---
 
-## 📊 Projects
+## Projects
 
-### 1. 🐕🐈 Dogs vs Cats Classification
-**Status:** ✅ Complete  
+### 1. Dogs vs Cats Classification
+**Status:** Complete  
 **Accuracy:** 96.36%  
 **Classes:** 2 (Binary)  
 **Dataset:** 25,000 images
@@ -33,8 +33,8 @@ domains with **90%+ accuracy** on all projects.
 <img width="1389" height="495" alt="image" src="https://github.com/user-attachments/assets/99761dd0-86eb-4a20-b99a-9c36aa93bf72" />
 
 
-### 2. 🍕🍔🍟🍗 Food Classification
-**Status:** ✅ Complete  
+### 2. Food Classification
+**Status:** Complete  
 **Accuracy:** 88.00% (Clean) | 78.50% (Noisy)  
 **Classes:** 4 (Burger, Crispy Chicken, Fries, Pizza)  
 **Dataset:** 800 images (600 train, 200 test)
@@ -51,17 +51,17 @@ domains with **90%+ accuracy** on all projects.
 
 
 
-### 3. 🐦 Bird Species Recognition
-**Status:** 📋 Planned  
+### 3. Bird Species Recognition
+**Status:** Planned  
 **Classes:** 50+
 
-### 4. 🌾 Plant Disease Detection
-**Status:** 📋 Planned  
+### 4. Plant Disease Detection
+**Status:** Planned  
 **Classes:** 10+
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** TensorFlow/Keras
 - **Model:** MobileNetV2 (Transfer Learning)
@@ -78,7 +78,7 @@ pillow>=9.0.0
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone repo
@@ -98,7 +98,7 @@ python predict.py --image path/to/image.jpg
 
 ---
 
-## 📈 Results Summary
+## Results Summary
 
 | Project | Accuracy | Precision | Recall | F1-Score |
 |---------|----------|-----------|--------|----------|
@@ -108,31 +108,31 @@ python predict.py --image path/to/image.jpg
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
-✅ **Production-Ready Code**
+**Production-Ready Code**
 - Clean, modular architecture
 - Comprehensive error handling
 - Full documentation
 
-✅ **Transfer Learning**
+**Transfer Learning**
 - Pre-trained MobileNetV2
 - Phase 1: Feature extraction
 - Phase 2: Fine-tuning
 
-✅ **Evaluation Metrics**
+**Evaluation Metrics**
 - Confusion matrices
 - Classification reports
 - Training visualizations
 
-✅ **Deployment Ready**
+**Deployment Ready**
 - Saved models (.keras format)
 - Inference scripts
 - REST API compatible
 
 ---
 
-## 📚 Learning Resources
+## Learning Resources
 
 Each project includes:
 - Jupyter notebooks with explanations
@@ -142,7 +142,7 @@ Each project includes:
 
 ---
 
-## 🤝 Connect With Me
+## Connect With Me
 
 - **GitHub:** [@farhanbin65](https://github.com/farhanbin65)
 - **Portfolio:** [farhanbin.dev](https://farhanbin.dev)
@@ -151,19 +151,19 @@ Each project includes:
 
 ---
 
-## 📄 License
+## License
 
 MIT License - Feel free to use for learning and projects!
 
 ---
 
-## ✨ Acknowledgments
+## Acknowledgments
 
 - TensorFlow/Keras team
 - Kaggle datasets
 - Transfer Learning techniques
 
-**Remember:** *"Knowledge shared is knowledge multiplied."* 🤲
+**Remember:** *"Knowledge shared is knowledge multiplied."* 
 
 ---
 
