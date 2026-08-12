@@ -65,7 +65,7 @@ domains with **90%+ accuracy** on all projects.
 - Best class: Trouser (99.7%) - unique shape
 - [View Project →](./projects/03_fashion_mnist)
 
-![Sample Images](./projects/03_fashion_mnist/results/sample_images.png)
+![Sample Images](./projects/03_fashion_mnist/results/predictions.png)
 
 ![Confusion Matrix Comparison](./projects/03_fashion_mnist/results/comparison_confusion_matrix.png)
 
