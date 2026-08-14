@@ -1,0 +1,26 @@
+{
+  "test_accuracy": 60.03,
+  "macro_f1": 0.57,
+  "num_classes": 7,
+  "train_samples": 4580,
+  "test_samples": 1146,
+  "class_names": [
+    "MEL",
+    "NV",
+    "BCC",
+    "AKIEC",
+    "BKL",
+    "DF",
+    "VASC"
+  ],
+  "technique": "Oversampling + Undersampling",
+  "per_class_f1": {
+    "MEL": 0.45,
+    "NV": 0.7,
+    "BCC": 0.61,
+    "AKIEC": 0.21,
+    "BKL": 0.53,
+    "DF": 0.62,
+    "VASC": 0.89
+  }
+}
