@@ -31,6 +31,7 @@ domains with **90%+ accuracy** on all projects.
 
 <img width="1389" height="495" alt="image" src="https://github.com/user-attachments/assets/99761dd0-86eb-4a20-b99a-9c36aa93bf72" />
 
+
 ---
 
 ### 2. Fast Food Classification
@@ -73,6 +74,27 @@ domains with **90%+ accuracy** on all projects.
 
 ---
 
+### 4. Skin Disease Classification (HAM10000)
+**Status:** Complete  
+**Accuracy:** 60.03% | **Macro F1:** 0.57  
+**Classes:** 7 skin diseases  
+**Dataset:** 10,015 dermatoscopic images  
+
+- Medical AI with severe class imbalance (NV=67% of data)
+- Oversampling rare classes + undersampling dominant class
+- Accuracy dropped 68.75% → 60.03% but Macro F1 jumped 0.36 → 0.57
+- Key insight: In medical AI, per-class F1 matters more than accuracy
+- Missing rare cancer is far more dangerous than a false alarm
+- [View Project →](./projects/04_skin_disease)
+
+![Class Distribution](./projects/04_skin_disease/results/class_distribution.png)
+
+![Confusion Matrix](./projects/04_skin_disease/results/confusion_matrix_balanced.png)
+
+![Training History](./projects/04_skin_disease/results/training_history.png)
+
+---
+
 ## Pipeline
 
 ```mermaid
@@ -110,13 +132,13 @@ pillow>=9.0.0
 
 ## Results Summary
 
-| Project | Accuracy | Precision | Recall | F1-Score |
-|---------|----------|-----------|--------|----------|
-| Dogs vs Cats | 96.74% | 0.96 | 0.96 | 0.96 |
-| Food Classification | 88.00% | 0.88 | 0.88 | 0.88 |
-| Fashion MNIST (CNN) | 94.42% | 0.94 | 0.94 | 0.94 |
-| Fashion MNIST (TL) | 93.24% | 0.93 | 0.93 | 0.93 |
-| Skin Disease | Coming soon | - | - | - |
+
+| Project | Accuracy | Macro F1 | Classes | Key Technique |
+|---------|----------|----------|---------|---------------|
+| Dogs vs Cats | 96.74% | 0.96 | 2 | Transfer Learning |
+| Food Classification | 88.00% | 0.88 | 4 | Transfer Learning + Noisy test |
+| Fashion MNIST | 94.42% | 0.94 | 10 | Custom CNN vs Transfer Learning |
+| Skin Disease | 60.03% | 0.57 | 7 | Class balancing + Medical AI |
 
 ---
 
