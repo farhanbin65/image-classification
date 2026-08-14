@@ -87,6 +87,8 @@ domains with **90%+ accuracy** on all projects.
 - Missing rare cancer is far more dangerous than a false alarm
 - [View Project →](./projects/04_skin_disease)
 
+![Sample](./projects/04_skin_disease/results/sample.jpeg)
+
 ![Class Distribution](./projects/04_skin_disease/results/class_distribution.png)
 
 ![Confusion Matrix](./projects/04_skin_disease/results/confusion_matrix_balanced.png)
